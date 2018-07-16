@@ -1,9 +1,11 @@
 (ns advent-of-code.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn find-repeated
+  [input]
+  (if (= (first input) (second input))
+    (cons (first input) find-repeated)
+    (find-repeated)))
 
-(defn puzzle-1
-  [input])
+(defn sum-repeated
+  [rep]
+  (reduce + rep))
