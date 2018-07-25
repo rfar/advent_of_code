@@ -23,6 +23,9 @@
 
 (+ 2 (puzzle-1)) ;; 2 is the last number, since it's equal to the first one
 
-;; (map str '(\3 \4 \5))
-;; (read-string "3")
-;; (str \5)
+;; Playground
+(last [1 2 3 4 5])
+(map str '(\3 \4 \5))
+(read-string "3")
+(Integer/parseInt "8")
+(str \5)
