@@ -1,13 +1,13 @@
 (ns advent-of-code.core
   (:require [clojure.string :as str]))
 
+(defn row-min-max-diff [row-str]
+  (let [row-num (map read-string (str/split row-str #"\s+"))]
+    (- (apply max row-num) (apply min row-num))))
+
 (defn solve [input]
   "Gives the result of the puzzle."
-  (apply max
-         (map read-string
-              (str/split
-                (get (str/split-lines (slurp input)) 0)
-                #"\s+"))))
+  (reduce + (map row-min-max-diff (str/split-lines (slurp input)))))
 
 (solve "resources/input-02.txt")
 
