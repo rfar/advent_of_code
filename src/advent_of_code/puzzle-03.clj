@@ -1,6 +1,7 @@
 (ns advent-of-code.core
   (:require [clojure.string :as str]))
 
+;; This is known as Ulam Spiral.
 ;; The l-th loop around 1 contains 8l elements.
 ;; Hence the total number of elements within the l loops are: 1 + 4l(l + 1).
 ;; The first (top-right) corner of the loop l is allocated to the item
@@ -52,8 +53,8 @@
 (solve 265149)
 
 ;; Playground
-(quot 11 2)
-(dec (Math/sqrt 81))
-(* 4 257 258)
-(count-loop-items 256)
-(corner (loop-num 265149) 3)
+; (quot 11 2)
+; (dec (Math/sqrt 81))
+; (* 4 257 258)
+; (count-loop-items 256)
+; (corner (loop-num 265149) 3)
