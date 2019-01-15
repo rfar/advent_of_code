@@ -11,3 +11,5 @@
          0
          (file->numbers f))
   )
+
+(solve "../resources/2018-01.txt")

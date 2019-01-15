@@ -1,13 +1,21 @@
-(define (solve f)
-  (let [nums ()]))
-
 ;; (split-at (port->string (open-input-file "/media/HDD/Codes/racket/advent/res/input-05.txt")) '\n')
 
 (define in-file "/media/HDD/Codes/racket/advent/res/input-05.txt")
 
-(read-line (open-input-file in-file))
+(define (file->numbers f)
+  (map (lambda (s)
+         (string->number s))
+       (file->lines f)))
 
-(file->string in-file)
+(define (solve f)
+  (let ([nums (file->numbers f)])
+    (println (vector-length nums))))
+
+(solve in-file)
+
+;; Playground
+;; (string-split)
+;; (read-line)
 
 ;; (defn jump [i jc v]
 ;;   (let [js (get v i)
