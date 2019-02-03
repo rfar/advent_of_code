@@ -7,6 +7,7 @@
        (file->lines f)))
 
 (define (solve f)
+  (display "Puzzle 2018-01 results is: ")
   (foldl +
          0
          (file->numbers f))
